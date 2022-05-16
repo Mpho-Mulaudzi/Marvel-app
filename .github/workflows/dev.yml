@@ -23,8 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@main
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
         with:
           node-version: '16.x'
           
@@ -35,7 +35,7 @@ jobs:
         run: npm run build --prod
       # deploy the app artifact to firebase
       - name: Deploy angular app to Firebase
-        uses: w9jds/firebase-action@main
+        uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
