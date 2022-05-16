@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cl": {
+    "now-ui-dashboard-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -141,7 +141,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
