@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "now-ui-dashboard-angular": {
+    "cl": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
