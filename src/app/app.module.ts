@@ -5,13 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
-
-import { AppRoutingModule } from './app.routing';
+import { AdminLayoutRoutingModule} from './layouts/admin-layout/admin-layout.routing';
 import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AppRoutingModule } from './app.routing';
+import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
+
 
 @NgModule({
   imports: [
@@ -20,13 +22,16 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     HttpClientModule,
     ComponentsModule,
     RouterModule,
-    AppRoutingModule,
     NgbModule,
+    AppRoutingModule,
+    AdminLayoutModule,
     ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+  
+   
 
   ],
   providers: [],

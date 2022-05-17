@@ -6,8 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+
+
 
 @NgModule({
   imports: [
@@ -19,8 +19,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    SignUpComponent,
-    SignInComponent
+   
+   
   ],
   exports: [
     FooterComponent,
