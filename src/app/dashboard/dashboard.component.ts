@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,8 @@ import * as Chartist from 'chartist';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  public isloading:boolean = false;
+  public movies=[];
   public lineBigDashboardChartType;
   public gradientStroke;
   public chartColor;
@@ -57,9 +60,13 @@ export class DashboardComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor() { }
+  constructor(private _movieService:MovieService) { }
 
   ngOnInit() {
+
+    this._movieService.GetData()
+    .subscribe(data=>this.movies=data);
+
     this.chartColor = "#FFFFFF";
     this.canvas = document.getElementById("bigDashboardChart");
     this.ctx = this.canvas.getContext("2d");

@@ -3,7 +3,20 @@
   <div class="container-fluid">
   <div class="row justify-content-center ">
 
-    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+
+      <div class="col-12 col-md-12 col-lg-4 col-xl-4" *ngFor="let movie of movies">
+       <div class="card" >
+         <img class="card-img-top" src="..." alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">{{movie.Title}}</h4>
+           <p class="card-text">{{movie.Description}}</p>
+           <a href="#" class="btn btn-primary">Get more info</a>
+         </div>
+       </div>
+     </div>
+
+
+    <!-- <div class="col-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card" >
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
@@ -48,17 +61,6 @@
     </div>
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-      <div class="card" >
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Eternals</h4>
-          <p class="card-text">aftermath of the era of thanos , the rise of the enternals</p>
-          <a href="#" class="btn btn-primary">Get more info</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
@@ -89,7 +91,9 @@
           <a href="#" class="btn btn-primary">Get more info</a>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
   </div>
 </div>
 </div>

@@ -1,0 +1,53 @@
+[
+  {
+    "id":1,
+    "Movie_Title" : "Spider Man -Away from home",
+    "Description" : "..tom holland's spiderman"
+  },
+
+  {
+    "id":2,
+    "Movie_Title" : "Doctor Strange",
+    "Description" : ".Doctor Strange is the jedi master of illusions"
+  },
+
+  {
+    "id":3,
+    "Movie_Title" : "Avengers :Infinity war",
+    "Description" : "Thanos on the verge of erasing 50% of the universe"
+  },
+
+  {
+    "id":4,
+    "Movie_Title" : "Eternals",
+    "Description" : ".aftermath of the era of thanos , the rise of the enternals"
+
+  },
+
+  {
+    "id":5,
+    "Movie_Title" : "Stars Wars",
+    "Description" : "...Luke i am your father"
+
+  },
+  {
+    "id":6,
+    "Movie_Title" : "Black Parnther",
+    "Description" : "the land of infinity wars"
+
+  },
+
+  {
+    "id":7,
+    "Movie_Title" : " Guardians of Galaxy",
+    "Description" : "t...................."
+
+  }
+
+
+
+
+
+
+
+]

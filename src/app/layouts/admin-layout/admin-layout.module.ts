@@ -16,6 +16,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { RatingsComponent } from '../../ratings/ratings.component';
 import { MoviesComponent } from '../../movies/movies.component';
+import { CardComponent } from '../../card/card.component';
+
+
 
 
 
@@ -23,7 +26,6 @@ import { MoviesComponent } from '../../movies/movies.component';
   imports: [
     CommonModule,
     AdminLayoutRoutingModule,
-    
     FormsModule,
     ChartsModule,
     NgbModule,
@@ -39,8 +41,11 @@ import { MoviesComponent } from '../../movies/movies.component';
     MapsComponent,
     NotificationsComponent,
     RatingsComponent,
-    MoviesComponent
-  
+    MoviesComponent,
+    CardComponent
+  ],
+  exports:[
+    CardComponent
   ]
 })
 

@@ -13,6 +13,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
   styleUrls: ['./admin-layout.component.scss']
 })
 export class AdminLayoutComponent implements OnInit {
+
   private _router: Subscription;
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
