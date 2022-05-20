@@ -8,6 +8,7 @@ import { IMovies } from '../models/movie';
 })
 export class MovieService {
   private _url : string = '/assets/data/moviesinfo.json'
+  private _title: IMovies;
 
   constructor(private http : HttpClient)
   {}
@@ -15,4 +16,5 @@ export class MovieService {
    GetData():Observable<IMovies[]>{
     return this.http.get<IMovies[]>(this._url);
   }
+
 }

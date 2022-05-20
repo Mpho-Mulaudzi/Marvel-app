@@ -28,6 +28,7 @@ import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

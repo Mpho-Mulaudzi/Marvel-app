@@ -17,6 +17,7 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { RatingsComponent } from '../../ratings/ratings.component';
 import { MoviesComponent } from '../../movies/movies.component';
 import { CardComponent } from '../../card/card.component';
+import { RatingsCardComponent } from '../../ratings-card/ratings-card.component';
 
 
 
@@ -42,10 +43,12 @@ import { CardComponent } from '../../card/card.component';
     NotificationsComponent,
     RatingsComponent,
     MoviesComponent,
-    CardComponent
+    CardComponent,
+    RatingsCardComponent
   ],
   exports:[
-    CardComponent
+    CardComponent,
+    RatingsCardComponent
   ]
 })
 

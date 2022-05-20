@@ -1,5 +1,7 @@
 <div class="background">
-    <h2>Best Movies</h2>
 
+    <div *ngFor="let title of titles">
+       <app-ratings-card [movie_title]="title"></app-ratings-card>
+    </div>
 
 </div>

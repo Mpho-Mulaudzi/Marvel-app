@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IMovies } from '../models/movie';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-ratings',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ratings.component.scss']
 })
 export class RatingsComponent implements OnInit {
+  public titles :IMovies[] =[];
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.getMovieTitles();
+  }
+
+  getMovieTitles(){
+    this.movieService.GetData().
+    subscribe(data =>this.titles = data)
   }
 
 }
