@@ -1,13 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IMoviesdb } from '../models/moviedb';
-
-export type ApiResponse = {
-  Response: string;
-  Search: IMoviesdb[];
-  totalResults: string;
-};
+import { IMoviesdb ,ApiResponse} from '../models/moviedb';
 
 
 @Injectable({
