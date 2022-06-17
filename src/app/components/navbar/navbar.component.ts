@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit {
 
    let scrollHeigth =20;
     if(window.scrollY >= scrollHeigth){
+      console.log(window.scrollY);
       document.body.style.setProperty('--navbar-scroll', "black");
       document.body.style.setProperty('--navbar-scroll-text', "black");
       document.body.style.setProperty('--navbar-scroll-shadow', "0px 6px 12px -5px #000000");
