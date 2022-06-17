@@ -5,3 +5,9 @@
      background-size: cover;
      text-align: center;
   }
+
+  body {
+  --navbar-scroll: transparent;
+  --navbar-scroll-text: white;
+  --navbar-scroll-shadow: none;
+}

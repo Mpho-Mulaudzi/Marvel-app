@@ -1,1 +1,69 @@
+/*Align cards*/
+/* .column {
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+} */
 
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #ffffff;
+  width:100%;
+} */
+.background {
+  /* this is needed or the background will be offset by a few pixels at the top */
+  overflow: auto;
+  position: relative;
+}
+
+
+.background::before {
+
+  content: "";
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100vh;
+  min-height: 100%;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/darksky.jpg') no-repeat;
+
+  text-align: center;
+
+
+
+}
+
+body {
+  padding-top: 65px;
+}
+
+/* @media (min-width: 1440px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+     column-count: 3;
+  }
+} */
+
+/* @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} */

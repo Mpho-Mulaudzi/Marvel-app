@@ -1,7 +1,19 @@
 .navbar {
   margin-bottom: 0;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #e030d2 !important;
+  z-index: 1;
 }
 
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e030d2 !important;
+  z-index: 1;
+
+}
+
+.navbar {
+  background-color: var(--navbar-scroll);
+  transition: background-color 1s ease;
+  color: var(--navbar-scroll-text);
+  -webkit-box-shadow: var(--navbar-scroll-shadow);
+  box-shadow: var(--navbar-scroll-shadow);
+}

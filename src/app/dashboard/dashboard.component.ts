@@ -1,4 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import * as Chartist from 'chartist';
 import { IMovies } from '../models/movie';
 import { IMoviesdb } from '../models/moviedb';
@@ -15,11 +16,11 @@ export class DashboardComponent implements OnInit {
   public movies: IMovies[] = [];
   public allmovies: IMoviesdb[] =[];
 
-  constructor(private _movieservice:MovieService,
+  constructor(private route: ActivatedRoute,
               private _movieService:MoviedbService) { }
 
   ngOnInit() {
-    this.getMovies();
+     this.getMovies();
 
   }
 
