@@ -1,51 +1,87 @@
-<nav class="navbar navbar-expand-lg fixed-top" [ngStyle]="scroll()">
-  <a class="navbar-brand" href="">
-    <img src="../../../assets/logo.png" alt="..." height="26" />
-  </a>
+<nav class="navbar navbar-expand-sm fixed-top" [ngStyle]="scroll()">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">
+      <img src="../../../assets/logo.png" alt="..." height="26" />
+    </a>
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <ul class="navbar-nav my-sm-0">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/"> Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/movies">Movies</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link">Shows</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/ratings">My List</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/ratings">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/ratings">Contact</a>
-    </li>
-  </ul>
-
-  <form class="form-inline my-2 my-sm-0 m-5 me-4">
-    <input
-      class="form-control m-3 p-3"
-      type="search"
-      placeholder="Search Movies"
-      aria-label="Search"
-    />
-
-    <button class="btn btn-outline-light" type="submit">
-      <i class="fas fa-search"></i>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
     </button>
-  </form>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/movies">Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Shows</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ratings">My List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ratings">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ratings">Contact</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-sm-0 m-1 me-4">
+      <button class="btn btn-outline-light" type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <input
+        class="form-control input-sm mr-sm-1"
+        type="search-hover"
+        placeholder="Search Movies"
+        aria-label="Search"
+      />
+    </form>
+
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle d-flex align-items-center"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span><i class="far fa-bell fa-2x"></i> </span>
+
+          <img
+            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+            class="rounded-circle"
+            height="36"
+            alt="Avatar"
+            loading="lazy"
+          />
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>

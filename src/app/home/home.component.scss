@@ -1,10 +1,3 @@
-/*Align cards*/
-/* .column {
-  float: left;
-  width: 100%;
-  padding: 0 10px;
-} */
-
 .row {
   margin: 0 -5px;
 }
@@ -44,23 +37,6 @@
   background-size: cover;
   text-align: center;
 }
-
-
-/* @media (min-width: 1440px) {
-  .card-columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-     column-count: 3;
-  }
-} */
-
-/* @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-} */
 .movies {
   margin-top: 50px;
   padding: 40px;
@@ -68,18 +44,44 @@
   z-index: -1;
   padding-top: 60px;
 
+}
+ul{
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 3px;
+  padding: 50px;
+}
+h1{
+  color:white;
+  margin-left: 60px;
+}
+h6{
+  color:white;
+  display:inline-block;
+}
+p{
+  color:azure;
+  text-align: left;
+}
+.fa-star{
+  color:yellow;
+  display:inline-block;
+}
+.fa-calendar-alt{
+ color:yellow;
+   display:inline-block;
+}
+.fa-clock{
+   color:yellow;
+   display:inline-block;
 
 }
-
-body {
-  --navbar-scroll: transparent;
-  --navbar-scroll-text: white;
-  --navbar-scroll-shadow: none;
+.btn{
+  border-radius: 20px;
 }
-
-
-  body {
-  --navbar-scroll: transparent;
-  --navbar-scroll-text: white;
-  --navbar-scroll-shadow: none;
+.fa-play{
+  color:black;
+}
+.fa-plus{
+  color:black;
 }
