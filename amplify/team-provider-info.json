@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-marvel-dev-104158-authRole",
+      "UnauthRoleArn": "arn:aws:iam::102239091916:role/amplify-marvel-dev-104158-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::102239091916:role/amplify-marvel-dev-104158-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-marvel-dev-104158-deployment",
+      "UnauthRoleName": "amplify-marvel-dev-104158-unauthRole",
+      "StackName": "amplify-marvel-dev-104158",
+      "StackId": "arn:aws:cloudformation:us-east-1:102239091916:stack/amplify-marvel-dev-104158/2ff87e30-f207-11ec-acce-0eb16d400901",
+      "AmplifyAppId": "d112ltosrgeefv"
+    },
+    "categories": {
+      "auth": {
+        "marvel1bb5be69": {}
+      }
+    }
+  }
+}
