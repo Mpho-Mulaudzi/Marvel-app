@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -12,18 +12,24 @@ import { MoviesComponent} from "../../movies/movies.component"
 import { CardComponent } from '../../card/card.component';
 import { RatingsCardComponent } from '../../ratings-card/ratings-card.component';
 import { HomeComponent } from '../../home/home.component';
-
-
+import { SigninComponent } from '../../authentication/signin/signin.component';
+import { SignupComponent } from '../../authentication/signup/signup.component';
+import { AngularMaterialModule } from '../../angular-material/angular-material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AdminLayoutRoutingModule,
     FormsModule,
     ChartsModule,
     NgbModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularMaterialModule,
+    FlexLayoutModule
   ],
   declarations: [
     DashboardComponent,
@@ -31,15 +37,20 @@ import { HomeComponent } from '../../home/home.component';
     MoviesComponent,
     CardComponent,
     RatingsCardComponent,
-    HomeComponent
+    HomeComponent,
+    SigninComponent,
+    SignupComponent
   ],
   exports:[
     CardComponent,
     RatingsCardComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    SigninComponent,
+    SignupComponent
 
-  ]
+  ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AdminLayoutModule {}

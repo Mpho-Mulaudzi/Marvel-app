@@ -7,8 +7,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RatingsComponent } from '../../ratings/ratings.component';
 import { MoviesComponent } from '../../movies/movies.component';
 import { MoviesResolver } from '../../resolvers/movies.resolver';
-
 import { MoviedbService } from '../../services/moviedb.service';
+import { SigninComponent } from '../../authentication/signin/signin.component';
+import { SignupComponent } from '../../authentication/signup/signup.component';
 
 const routes: Routes = [
     {
@@ -27,6 +28,12 @@ const routes: Routes = [
     },
     {
       path : 'movies',         component:MoviesComponent
+    },
+    {
+      path :  'login',         component:SigninComponent
+    },
+    {
+      path:    'signup',        component:SignupComponent
     }
 
 

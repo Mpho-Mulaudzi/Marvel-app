@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -11,6 +11,10 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AppRoutingModule } from './app.routing';
 import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularMaterialModule } from '../../src/app/angular-material/angular-material.module';
+
 
 
 
@@ -24,13 +28,18 @@ import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
     NgbModule,
     AppRoutingModule,
     AdminLayoutModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    AngularMaterialModule,
     ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -28,12 +28,11 @@
   position: fixed;
   left: 0;
   right: 0;
-
   z-index: -1;
   height: 100vh;
   min-height: 400px;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/darksky.jpg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/darksky.png') no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -84,4 +83,18 @@ p{
 }
 .fa-plus{
   color:black;
+}
+.col{
+  float:left;
+
+}
+ .first-img {
+  width: 30%;
+  height: 220px;
+  border-radius:8px;
+}
+.second-img{
+   width:50%;
+   height: 160px;
+   border-radius: 8px;
 }
