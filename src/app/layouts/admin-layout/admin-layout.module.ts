@@ -12,8 +12,6 @@ import { MoviesComponent} from "../../movies/movies.component"
 import { CardComponent } from '../../card/card.component';
 import { RatingsCardComponent } from '../../ratings-card/ratings-card.component';
 import { HomeComponent } from '../../home/home.component';
-import { SigninComponent } from '../../authentication/signin/signin.component';
-import { SignupComponent } from '../../authentication/signup/signup.component';
 import { AngularMaterialModule } from '../../angular-material/angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -38,16 +36,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CardComponent,
     RatingsCardComponent,
     HomeComponent,
-    SigninComponent,
-    SignupComponent
+
   ],
   exports:[
     CardComponent,
     RatingsCardComponent,
     DashboardComponent,
     HomeComponent,
-    SigninComponent,
-    SignupComponent
+
 
   ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]

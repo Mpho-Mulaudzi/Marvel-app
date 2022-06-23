@@ -3,7 +3,8 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 import { HostListener } from '@angular/core';
-
+import { AuthenticationService } from '../../services/auth/authentication.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-navbar',
@@ -12,13 +13,21 @@ import { HostListener } from '@angular/core';
 })
 @HostListener('window:scroll', ['$event'])
 export class NavbarComponent implements OnInit {
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
+  isLoggedIn$: Observable<boolean>;
+
+  hide: string ="";
+    constructor(location: Location,  private element: ElementRef,
+      private router: Router,private authService:AuthenticationService )
+     {
 }
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.scroll, true)
+    this.isLoggedIn$ = this.authService.isLoggedIn
   }
-
+  onLogout(){
+    this.authService.logout();                      // {3}
+  }
   scroll = (): void => {
 
    let scrollHeigth =20;
@@ -32,6 +41,11 @@ export class NavbarComponent implements OnInit {
       document.body.style.setProperty('--navbar-scroll-text', "black");
       document.body.style.setProperty('--navbar-scroll-shadow', "none");
     }
+  }
+
+
+  hideNavbar(){
+    return "this.isLoggedIn$ | async" ;
   }
 
 }

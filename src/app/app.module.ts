@@ -14,7 +14,8 @@ import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../src/app/angular-material/angular-material.module';
-
+import { AuthComponent } from './authentication/auth/auth.component';
+import { AuthModule } from './authentication/auth/auth.module';
 
 
 
@@ -31,11 +32,13 @@ import { AngularMaterialModule } from '../../src/app/angular-material/angular-ma
     FlexLayoutModule,
     ReactiveFormsModule,
     AngularMaterialModule,
+    AuthModule,
     ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    AuthComponent,
 
   ],
   providers: [],

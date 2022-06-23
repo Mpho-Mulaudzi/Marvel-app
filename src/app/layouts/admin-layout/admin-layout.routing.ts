@@ -8,8 +8,8 @@ import { RatingsComponent } from '../../ratings/ratings.component';
 import { MoviesComponent } from '../../movies/movies.component';
 import { MoviesResolver } from '../../resolvers/movies.resolver';
 import { MoviedbService } from '../../services/moviedb.service';
-import { SigninComponent } from '../../authentication/signin/signin.component';
-import { SignupComponent } from '../../authentication/signup/signup.component';
+
+import { AuthGuard } from '../../services/auth/auth.guard';
 
 const routes: Routes = [
     {
@@ -27,14 +27,9 @@ const routes: Routes = [
       path: 'ratings',        component:RatingsComponent
     },
     {
-      path : 'movies',         component:MoviesComponent
-    },
-    {
-      path :  'login',         component:SigninComponent
-    },
-    {
-      path:    'signup',        component:SignupComponent
-    }
+      path : 'movies',         component:MoviesComponent,
+      canActivate:[AuthGuard]},
+
 
 
 
