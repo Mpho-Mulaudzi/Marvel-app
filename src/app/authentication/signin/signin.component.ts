@@ -2,43 +2,53 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../../services/auth/authentication.service';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
+import { Auth } from 'aws-amplify';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  form: FormGroup;
-  private formSubmitAttempt: boolean;
-  isLoggedIn$: Observable<boolean>;
+  email: string = '';
+  password: string ='';
+
   constructor(
-    private fb:FormBuilder,
-    private authService: AuthenticationService
+    private router: Router
   ) {
 
   }
 
   ngOnInit(): void {
-    this.form = this.fb.group({
-      userName: ['', Validators.required],
-      password: ['', Validators.required],
-
-  });
-  this.isLoggedIn$ = this.authService.isLoggedIn
 
 }
 
-   isFieldInvalid(field: string) {
-    return (
-      (!this.form.get(field).valid && this.form.get(field).touched) ||
-      (this.form.get(field).untouched && this.formSubmitAttempt)
-    );
-  }
+    async loginWithCognito() {
 
-  onSubmit() {
-    if (this.form.valid) {
-      //this.authService.login(this.form.value);
+    try {
+
+      var user = await Auth.signIn(this.email.toString(), this.password.toString());
+
+      console.log('Authentication performed for user=' + this.email + 'password=' + this.password + ' login result==' + user);
+
+      var tokens = user.signInUserSession;
+
+      if (tokens != null) {
+
+        console.log('User authenticated');
+
+        this.router.navigateByUrl('localhost:4200/admin');
+
+        alert('You are logged in successfully !');
+      }
+
+   } catch (error) {
+
+      console.log(error);
+
+      alert('User Authentication failed');
     }
-    this.formSubmitAttempt = true;
   }
 }
+

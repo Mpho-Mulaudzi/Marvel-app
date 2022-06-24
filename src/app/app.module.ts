@@ -19,6 +19,7 @@ import { AuthModule } from './authentication/auth/auth.module';
 
 
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,

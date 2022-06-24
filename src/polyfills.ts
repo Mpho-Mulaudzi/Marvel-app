@@ -60,7 +60,7 @@ import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 /***************************************************************************************************
  * Zone JS is required by Angular itself.
  */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
+import 'zone.js';  // Included with Angular CLI.
 
 
 
@@ -73,7 +73,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
  */
 // import 'intl';  // Run `npm install --save intl`.
-(window as any).global = window;
-(window as any).process = {
-  env: { DEBUG: undefined },
-};
+declare global {
+    interface Window { global: any }
+}
+window.global = window;

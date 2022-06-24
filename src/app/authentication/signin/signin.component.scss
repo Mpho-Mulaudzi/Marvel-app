@@ -1,25 +1,71 @@
 
-.background::before {
-  position: fixed;
-  left: 0;
-  right: 0;
 
-  z-index: -1;
-  height: 100vh;
-  min-height: 400px;
-  background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/darksky.png') no-repeat;
-  background-size: cover;
-  text-align: center;
+
+button{
+
+background-color: #192a3a;
+
+border: none;
+
+color: white;
+
+padding: 15px 32px;
+
+text-align: center;
+
+text-decoration: none;
+
+display: inline-block;
+
+font-size: 16px;
+
+margin: 4px 2px;
+
+cursor: pointer;
+
+border-radius:0.5em;
+
 }
-mat-card {
-  max-width: 400px;
-  margin: 2em auto;
-  text-align: center;
+input{
+
+    width: 100%;
+
+    line-height: 2em;
+
 }
-.signin-content {
-  padding: 60px 1rem;
+
+label{
+
+    line-height: 2em;
+
+    font-weight: bold;
+
 }
-.full-width-input {
-  width: 100%;
-}
+  a,
+  a:visited,
+  a:hover {
+
+    color: #1976d2;
+
+    text-decoration: none;
+
+  }
+  a:hover {
+    color: #125699;
+
+  }
+  .content {
+
+    display: flex;
+
+    margin: 82px auto 32px;
+
+    padding: 0 16px;
+
+    max-width: 960px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { User } from './user';
+import { User } from './user'
 interface CognitoUser
 {
     user: CognitoUser;
@@ -16,6 +16,10 @@ interface CognitoUser
 
 export class AuthenticationService {
  private loggedIn = new BehaviorSubject<boolean>(false);
+   userName: string;
+  password: string;
+  email:string;
+  phone_no: number;
 
   get isLoggedIn() {
     return this.loggedIn.asObservable();
@@ -28,11 +32,11 @@ export class AuthenticationService {
    async signUp() {
     try {
         const { user } = await Auth.signUp({
-            username:"",
-            password:"",
+            username:this.userName,
+            password:this.password,
             attributes: {
-                email:"",          // optional
-                phone_number:"",   // optional - E.164 number convention
+                email:this.email,          // optional
+                phone_number: this.phone_no,   // optional - E.164 number convention
                 // other custom attributes
             }
         });
@@ -51,7 +55,7 @@ async signIn() {
    login(user: User){
     if (user.userName !== '' && user.password !== '' ) { // {3}
       this.loggedIn.next(true);
-      this.router.navigate(['/']);
+      this.router.navigate(['/admin']);
     }
   }
 

@@ -1,32 +1,73 @@
-<div class="background">
-  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card class="box">
-      <mat-card-header>
-        <mat-card-title>Register</mat-card-title>
-      </mat-card-header>
-      <form class="example-form">
-        <mat-card-content>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" />
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" />
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Password" />
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Choose a role...</mat-label>
-            <mat-select>
-              <!-- <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
-            </mat-option> -->
-            </mat-select>
-          </mat-form-field>
-        </mat-card-content>
-        <button mat-stroked-button color="accent" class="btn-block">
-          Register
-        </button>
-      </form>
-    </mat-card>
-  </div>
+<div class="container">
+  <form>
+    <div>
+      <h1>Register with My APP</h1>
+    </div>
+
+    <div>
+      <label for="givenName">First Name</label>
+
+      <input
+        type="text"
+        name="givenName"
+        [(ngModel)]="givenName"
+        required
+        placeholder="Enter your first name"
+      />
+    </div>
+
+    <div>
+      <label for="familyName">Last Name</label>
+
+      <input
+        type="text"
+        name="familyName"
+        [(ngModel)]="familyName"
+        required
+        placeholder="Enter your last name"
+      />
+    </div>
+
+    <div>
+      <label for="email">Email address</label>
+
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        placeholder="Enter your email"
+      />
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        placeholder="Enter your password"
+      />
+    </div>
+
+    <div>
+      <br />
+
+      <button
+        (click)="register()"
+        class="btn btn-primary btn-block"
+        type="button"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+
+  <p class="text-dark mb-0">
+    Already a member?<a [href]="['/auth/login']" class="text-primary ml-1"
+      >Login</a
+    >
+  </p>
 </div>

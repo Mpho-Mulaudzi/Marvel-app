@@ -9,11 +9,21 @@
       "UnauthRoleName": "amplify-marvel-dev-104158-unauthRole",
       "StackName": "amplify-marvel-dev-104158",
       "StackId": "arn:aws:cloudformation:us-east-1:102239091916:stack/amplify-marvel-dev-104158/2ff87e30-f207-11ec-acce-0eb16d400901",
-      "AmplifyAppId": "d112ltosrgeefv"
+      "AmplifyAppId": "d112ltosrgeefv",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-marvel-dev-104158-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
         "marvel1bb5be69": {}
+      },
+      "function": {
+        "marvel1bb5be69CustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-marvel-dev-104158-deployment",
+          "s3Key": "amplify-builds/marvel1bb5be69CustomMessage-63696775346d68354465-build.zip"
+        }
       }
     }
   }
