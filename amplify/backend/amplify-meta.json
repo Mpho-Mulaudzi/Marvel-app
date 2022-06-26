@@ -1,0 +1,96 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-marvel-dev-104158-authRole",
+      "UnauthRoleArn": "arn:aws:iam::102239091916:role/amplify-marvel-dev-104158-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::102239091916:role/amplify-marvel-dev-104158-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-marvel-dev-104158-deployment",
+      "UnauthRoleName": "amplify-marvel-dev-104158-unauthRole",
+      "StackName": "amplify-marvel-dev-104158",
+      "StackId": "arn:aws:cloudformation:us-east-1:102239091916:stack/amplify-marvel-dev-104158/2ff87e30-f207-11ec-acce-0eb16d400901",
+      "AmplifyAppId": "d112ltosrgeefv",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-marvel-dev-104158-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  },
+  "auth": {
+    "marvel1bb5be69": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "marvel1bb5be69CustomMessage",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-marvel-dev-104158-deployment/amplify-cfn-templates/auth/marvel1bb5be69-cloudformation-template.json",
+        "logicalId": "authmarvel1bb5be69"
+      },
+      "lastPushTimeStamp": "2022-06-23T12:28:08.397Z",
+      "output": {
+        "UserPoolId": "us-east-1_lzOINR2bw",
+        "AppClientIDWeb": "7t4ngkbc3v678485k9i315mpu6",
+        "AppClientID": "77qs4ttal00q3uj9e7qs303jvv",
+        "IdentityPoolId": "us-east-1:52fd3dba-f54d-4b8c-bb34-a3f592b13499",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:102239091916:userpool/us-east-1_lzOINR2bw",
+        "IdentityPoolName": "marvel1bb5be69_identitypool_1bb5be69__dev",
+        "UserPoolName": "marvel1bb5be69_userpool_1bb5be69"
+      },
+      "lastPushDirHash": "77vswMuCbvi7qvyk9zYj/3CeOO0="
+    }
+  },
+  "function": {
+    "marvel1bb5be69CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2022-06-23T12:24:43.095Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-06-23T12:24:43.368Z",
+      "distZipFilename": "marvel1bb5be69CustomMessage-63696775346d68354465-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-marvel-dev-104158-deployment",
+        "s3Key": "amplify-builds/marvel1bb5be69CustomMessage-63696775346d68354465-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-marvel-dev-104158-deployment/amplify-cfn-templates/function/marvel1bb5be69CustomMessage-cloudformation-template.json",
+        "logicalId": "functionmarvel1bb5be69CustomMessage"
+      },
+      "lastPushTimeStamp": "2022-06-23T12:28:08.397Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:102239091916:function:marvel1bb5be69CustomMessage-dev",
+        "Name": "marvel1bb5be69CustomMessage-dev",
+        "LambdaExecutionRole": "marvel1bb5be69CustomMessage-dev"
+      },
+      "lastPushDirHash": "Y4yy4Ei+qp+glpnpehhHU+Fe/lA="
+    }
+  }
+}

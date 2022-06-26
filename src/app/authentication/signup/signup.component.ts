@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
         });
         console.log(user);
           alert('User signup completed , please check verify your email.');
-              this.router.navigate(['/auth/login']);
+              this.router.navigate(['/login']);
     } catch (error) {
         console.log('error signing up:', error);
     }
