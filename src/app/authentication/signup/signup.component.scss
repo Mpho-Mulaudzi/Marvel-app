@@ -1,3 +1,25 @@
+.container {
+  /* this is needed or the background will be offset by a few pixels at the top */
+  overflow: auto;
+  position: relative;
+}
+
+
+.container::before {
+
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100vh;
+  min-height: 400px;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/signup.jpg') no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
 
 button{
 
@@ -52,3 +74,9 @@ label{
     color: #125699;
 
   }
+.card {
+  margin-top: 50px;
+  padding: 40px;
+ width:18rem;
+
+ }

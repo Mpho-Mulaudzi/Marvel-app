@@ -38,8 +38,8 @@ export class SigninComponent implements OnInit {
 
         console.log('User authenticated');
 
-       const result= this.router.navigateByUrl('admin');
-       console.log(result);
+       this.router.navigateByUrl('/admin');
+
         alert('You are logged in successfully !');
       }
 

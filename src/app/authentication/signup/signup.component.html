@@ -1,73 +1,82 @@
 <div class="container">
-  <form>
-    <div>
-      <h1>Register with My APP</h1>
-    </div>
+  <div class="card form-control w-50">
+    <form>
+      <div class="text-center">
+        <img src="../../../assets/logo.png" width="75px" alt="logo" />
+        <h1>Create a new account</h1>
+      </div>
+      <div>
+        <p class="text-dark mb-0">
+          Already a member?<a [href]="['/login']" class="text-primary ml-1"
+            >Login</a
+          >
+        </p>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="givenName">First Name</label>
 
-    <div>
-      <label for="givenName">First Name</label>
+          <input
+            type="text"
+            name="givenName"
+            [(ngModel)]="givenName"
+            required
+            class="form-control"
+            placeholder="Enter your first name"
+          />
+        </div>
 
-      <input
-        type="text"
-        name="givenName"
-        [(ngModel)]="givenName"
-        required
-        placeholder="Enter your first name"
-      />
-    </div>
+        <div class="col">
+          <label for="familyName">Last Name</label>
 
-    <div>
-      <label for="familyName">Last Name</label>
+          <input
+            type="text"
+            name="familyName"
+            [(ngModel)]="familyName"
+            required
+            class="form-control"
+            placeholder="Enter your last name"
+          />
+        </div>
+      </div>
 
-      <input
-        type="text"
-        name="familyName"
-        [(ngModel)]="familyName"
-        required
-        placeholder="Enter your last name"
-      />
-    </div>
+      <div>
+        <label for="email">Email address</label>
 
-    <div>
-      <label for="email">Email address</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+          class="form-control"
+          placeholder="Enter your email"
+        />
+      </div>
 
-      <input
-        type="email"
-        name="email"
-        [(ngModel)]="email"
-        required
-        placeholder="Enter your email"
-      />
-    </div>
+      <div>
+        <label for="password">Password</label>
 
-    <div>
-      <label for="password">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          class="form-control"
+          required
+          placeholder="Enter your password"
+        />
+      </div>
 
-      <input
-        type="password"
-        [(ngModel)]="password"
-        name="password"
-        required
-        placeholder="Enter your password"
-      />
-    </div>
+      <div>
+        <br />
 
-    <div>
-      <br />
-
-      <button
-        (click)="register()"
-        class="btn btn-primary btn-block"
-        type="button"
-      >
-        Register
-      </button>
-    </div>
-  </form>
-
-  <p class="text-dark mb-0">
-    Already a member?<a [href]="['/auth/login']" class="text-primary ml-1"
-      >Login</a
-    >
-  </p>
+        <button
+          (click)="register()"
+          class="btn btn-primary btn-block"
+          type="button"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
