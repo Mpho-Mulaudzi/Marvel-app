@@ -15,13 +15,13 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Amplify, Auth } from 'aws-amplify';
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-import awsconfig from './aws-exports';
-import 'hammerjs';
+import { enableProdMode } from "@angular/core";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { Amplify, Auth } from "aws-amplify";
+import { AppModule } from "./app/app.module";
+import { environment } from "./environments/environment";
+import awsconfig from "./aws-exports";
+import "hammerjs";
 
 Amplify.configure(awsconfig);
 

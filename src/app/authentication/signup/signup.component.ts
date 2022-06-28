@@ -1,43 +1,47 @@
-
-import { Component, OnInit } from '@angular/core';
-import {Auth} from 'aws-amplify';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component, OnInit, DoCheck } from "@angular/core";
+import { Auth } from "aws-amplify";
+import { FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: "app-signup",
+  templateUrl: "./signup.component.html",
+  styleUrls: ["./signup.component.scss"],
 })
 export class SignupComponent implements OnInit {
-  email:string;
-  password:string;
-  givenName:string;
-  familyName:string;
-  constructor(private router:Router) { }
+  email: string;
+  password: string;
+  givenName: string;
+  familyName: string;
+  constructor(private _router: Router, private _formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
-   register(){
+  ngOnInit(): void {}
 
+  registerForm = this._formBuilder.group({
+    name: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  register(): void {
     try {
-
-        const user  =  Auth.signUp({
-           username: this.email,
-           password: this.password,
-            attributes: {
-                 email: this.email,
-                 given_name: this.givenName,
-               family_name: this.familyName   // optional - E.164 number convention
-                // other custom attributes
-            }
-        });
-        console.log(user);
-          alert('User signup completed , please check verify your email.');
-              this.router.navigate(['/login']);
+      const user = Auth.signUp({
+        username: this.email,
+        password: this.password,
+        attributes: {
+          email: this.email,
+          given_name: this.givenName,
+          family_name: this.familyName, // optional - E.164 number convention
+          // other custom attributes
+        },
+      });
+      console.log(user);
+      alert("User signup completed , please check verify your email.");
     } catch (error) {
-        console.log('error signing up:', error);
+      console.log("error signing up:", error);
     }
 
+    this._router.navigateByUrl("/login");
+    this.registerForm.reset();
   }
 }
-

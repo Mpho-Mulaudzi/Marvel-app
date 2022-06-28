@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card form-control w-50">
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
       <div class="text-center">
         <img src="../../../assets/logo.png" width="75px" alt="logo" />
         <h1>Create a new account</h1>
@@ -17,6 +17,7 @@
           <label for="givenName">First Name</label>
 
           <input
+            id="name"
             type="text"
             name="givenName"
             [(ngModel)]="givenName"
@@ -30,6 +31,7 @@
           <label for="familyName">Last Name</label>
 
           <input
+            id="lastname"
             type="text"
             name="familyName"
             [(ngModel)]="familyName"
@@ -44,6 +46,7 @@
         <label for="email">Email address</label>
 
         <input
+          id="email"
           type="email"
           name="email"
           [(ngModel)]="email"
@@ -57,6 +60,7 @@
         <label for="password">Password</label>
 
         <input
+          id="password"
           type="password"
           [(ngModel)]="password"
           name="password"
@@ -69,11 +73,7 @@
       <div>
         <br />
 
-        <button
-          (click)="register()"
-          class="btn btn-primary btn-block"
-          type="button"
-        >
+        <button class="btn btn-primary btn-block" type="submit">
           Register
         </button>
       </div>

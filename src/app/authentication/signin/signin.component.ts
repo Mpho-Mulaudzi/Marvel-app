@@ -15,7 +15,7 @@ export class SigninComponent implements OnInit {
   password: string ='';
 
   constructor(
-    private router: Router
+    private _router: Router
   ) {
 
   }
@@ -38,7 +38,7 @@ export class SigninComponent implements OnInit {
 
         console.log('User authenticated');
 
-       this.router.navigateByUrl('/admin');
+       this._router.navigate(['/admin']);
 
         alert('You are logged in successfully !');
       }
