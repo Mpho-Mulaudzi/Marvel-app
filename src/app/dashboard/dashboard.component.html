@@ -1,14 +1,16 @@
-<div class="background">
-  <div class="movies">
-    <div class="row justify-content-center">
-      <div
-        class="col-12 col-md-12 col-lg-4 col-xl-4"
-        *ngFor="let movie of allmovies"
-      >
-        <img class="w-full" [src]="movie.Poster" [alt]="movie.Title" />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">
-            {{ movie.Title }}
+<div class="container">
+  <div class="background">
+    <div class="movies">
+      <div class="row justify-content-center">
+        <div
+          class="col-12 col-md-12 col-lg-4 col-xl-4"
+          *ngFor="let movie of allmovies"
+        >
+          <img class="w-full" [src]="movie.Poster" [alt]="movie.Title" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">
+              {{ movie.Title }}
+            </div>
           </div>
         </div>
       </div>

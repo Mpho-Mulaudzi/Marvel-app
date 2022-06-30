@@ -7,7 +7,7 @@
       </div>
       <div>
         <p class="text-dark mb-0">
-          Already a member?<a [href]="['/login']" class="text-primary ml-1"
+          Already a member?<a routerLink="/auth/login" class="text-primary ml-1"
             >Login</a
           >
         </p>
@@ -73,7 +73,7 @@
       <div>
         <br />
 
-        <button class="btn btn-primary btn-block" type="submit">
+        <button class="btn btn-primary btn-block" (click)="navigateToSignIn()">
           Register
         </button>
       </div>

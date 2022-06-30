@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
-import { AuthComponent } from "./authentication/auth/auth.component";
 import { RatingsComponent } from "../../src/app/ratings/ratings.component";
 import { MoviesComponent } from "../app/movies/movies.component";
 import { DashboardComponent } from "../app/dashboard/dashboard.component";
@@ -11,6 +10,12 @@ import { HomeComponent } from "../app/home/home.component";
 const routes: Routes = [
   {
     path: "",
+    redirectTo: "admin",
+    pathMatch: "full",
+  },
+
+  {
+    path: "admin",
     component: AdminLayoutComponent,
     children: [
       {
@@ -36,15 +41,9 @@ const routes: Routes = [
   },
 
   {
-    path: "",
-    component: AuthComponent,
-    children: [
-      {
-        path: "",
-        loadChildren: () =>
-          import("./authentication/auth/auth.module").then((x) => x.AuthModule),
-      },
-    ],
+    path: "auth",
+    loadChildren: () =>
+      import("./authentication/auth/auth.module").then((x) => x.AuthModule),
   },
   {
     path: "**",

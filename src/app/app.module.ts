@@ -12,8 +12,6 @@ import { AppRoutingModule } from "./app.routing";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ReactiveFormsModule } from "@angular/forms";
 import { AngularMaterialModule } from "../../src/app/angular-material/angular-material.module";
-import { AuthComponent } from "./authentication/auth/auth.component";
-import { AuthModule } from "./authentication/auth/auth.module";
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RatingsComponent } from "../../src/app/ratings/ratings.component";
@@ -34,14 +32,12 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
     FlexLayoutModule,
     ReactiveFormsModule,
     AngularMaterialModule,
-    AuthModule,
     ToastrModule.forRoot(),
     CommonModule,
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthComponent,
     DashboardComponent,
     RatingsComponent,
     MoviesComponent,

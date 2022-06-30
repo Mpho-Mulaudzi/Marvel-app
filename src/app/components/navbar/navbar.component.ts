@@ -17,7 +17,7 @@ import { Observable } from "rxjs/Observable";
 })
 @HostListener("window:scroll", ["$event"])
 export class NavbarComponent implements OnInit {
-  isLoggedIn$: Observable<boolean>;
+  isLoggedIn: boolean = false;
 
   hide: string = "";
   constructor(
@@ -28,10 +28,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     window.addEventListener("scroll", this.scroll, true);
-    this.isLoggedIn$ = this.authService.isLoggedIn;
+    this.authService.isLoggedIn$.subscribe(
+      (isLoggedIn) => (this.isLoggedIn = isLoggedIn)
+    );
   }
   onLogout() {
-    this.authService.logout(); // {3}
+    this.authService.logout();
   }
   scroll = (): void => {
     let scrollHeigth = 20;

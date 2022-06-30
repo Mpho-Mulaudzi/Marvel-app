@@ -3,6 +3,7 @@ import { Auth } from "aws-amplify";
 import { Router } from "@angular/router";
 import { BehaviorSubject } from "rxjs";
 import { User } from "./user";
+import { Hub, Logger } from "aws-amplify";
 interface CognitoUser {
   user: CognitoUser;
   userConfirmed: boolean;
@@ -12,17 +13,25 @@ interface CognitoUser {
   providedIn: "root",
 })
 export class AuthenticationService {
-  private loggedIn = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = new BehaviorSubject<boolean>(false);
   userName: string;
   password: string;
   email: string;
   phone_no: number;
 
-  get isLoggedIn() {
-    return this.loggedIn.asObservable();
+  constructor(private router: Router) {
+    Hub.listen("auth", (data) => {
+      console.log("auth event", data);
+      switch (data.payload.event) {
+        case "signIn":
+          this.isLoggedIn$.next(true);
+          break;
+        case "signOut":
+          this.isLoggedIn$.next(false);
+          break;
+      }
+    });
   }
-
-  constructor(private router: Router) {}
 
   async signUp() {
     try {
@@ -49,15 +58,15 @@ export class AuthenticationService {
   }
   login(user: User) {
     if (user.userName !== "" && user.password !== "") {
-      // {3}
-      this.loggedIn.next(true);
+      this.isLoggedIn$.next(true);
       this.router.navigate(["/admin"]);
     }
   }
 
   logout() {
-    // {4}
-    this.loggedIn.next(false);
-    this.router.navigate(["/login"]);
+    this.isLoggedIn$.next(false);
+    this.router.navigate(["auth/login"]);
   }
+
+  getState() {}
 }

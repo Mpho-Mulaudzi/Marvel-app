@@ -35,13 +35,15 @@ export class SignupComponent implements OnInit {
           // other custom attributes
         },
       });
-      console.log(user);
-      alert("User signup completed , please check verify your email.");
+
+      // alert("User signup completed , please check verify your email.");
     } catch (error) {
       console.log("error signing up:", error);
     }
-
-    this._router.navigateByUrl("/login");
     this.registerForm.reset();
+  }
+
+  navigateToSignIn() {
+    this._router.navigateByUrl("auth/login");
   }
 }
