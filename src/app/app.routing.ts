@@ -1,6 +1,10 @@
+// import { Component, NgModule } from "@angular/core";
 import { Component, NgModule } from "@angular/core";
+// import { CommonModule } from "@angular/common";
 import { CommonModule } from "@angular/common";
+// import { BrowserModule } from "@angular/platform-browser";
 import { BrowserModule } from "@angular/platform-browser";
+// import { Routes, RouterModule } from "@angular/router";
 import { Routes, RouterModule } from "@angular/router";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { RatingsComponent } from "../../src/app/ratings/ratings.component";
