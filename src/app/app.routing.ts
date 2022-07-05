@@ -11,6 +11,7 @@ import { RatingsComponent } from "../../src/app/ratings/ratings.component";
 import { MoviesComponent } from "../app/movies/movies.component";
 import { DashboardComponent } from "../app/dashboard/dashboard.component";
 import { HomeComponent } from "../app/home/home.component";
+import { MylistComponent } from "../../src/app/mylist/mylist.component";
 const routes: Routes = [
   {
     path: "",
@@ -40,6 +41,10 @@ const routes: Routes = [
         path: "movies",
         component: MoviesComponent,
         // canActivate: [AuthGuard],
+      },
+      {
+        path: "list",
+        component: MylistComponent,
       },
     ],
   },

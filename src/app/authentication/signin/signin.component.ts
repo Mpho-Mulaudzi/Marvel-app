@@ -14,6 +14,7 @@ export class SigninComponent implements OnInit {
   isLoggedIn$: Observable<Boolean>;
   email: string = "";
   password: string = "";
+  form;
 
   constructor(
     private router: Router,
@@ -31,21 +32,13 @@ export class SigninComponent implements OnInit {
         this.password.toString()
       );
 
-      console.log(
-        "Authentication performed for user=" +
-          this.email +
-          "password=" +
-          this.password +
-          " login result==" +
-          user
-      );
-
       var tokens = user.signInUserSession;
+      console.log(tokens);
 
       if (tokens != null) {
         console.log("User authenticated");
 
-        this.router.navigateByUrl("admin");
+        this.router.navigateByUrl("admin/home");
       }
     } catch (error) {
       console.log(error);

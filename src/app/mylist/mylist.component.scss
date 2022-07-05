@@ -1,0 +1,20 @@
+.background {
+  position: relative;
+  background-image: url(../../assets/wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+
+}
+
+.lists {
+  margin-top: 50px;
+  padding: 40px;
+  position: relative;
+  z-index: -1;
+  padding-top: 60px;
+
+
+}

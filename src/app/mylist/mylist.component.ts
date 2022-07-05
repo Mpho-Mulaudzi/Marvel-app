@@ -1,14 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { IMovies } from "../models/movie";
-import { MovieService } from "../services/movie.service";
 import { Apollo, ApolloBase, gql } from "apollo-angular";
 @Component({
-  selector: "app-ratings",
-  templateUrl: "./ratings.component.html",
-  styleUrls: ["./ratings.component.scss"],
+  selector: "app-mylist",
+  templateUrl: "./mylist.component.html",
+  styleUrls: ["./mylist.component.scss"],
 })
-export class RatingsComponent implements OnInit {
-  public titles: IMovies[] = [];
+export class MylistComponent implements OnInit {
   users: any[];
   name: string;
   constructor(private appolloProvider: Apollo) {}

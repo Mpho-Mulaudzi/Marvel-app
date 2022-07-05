@@ -21,7 +21,7 @@ export class AuthenticationService {
 
   constructor(private router: Router) {
     Hub.listen("auth", (data) => {
-      console.log("auth event", data);
+      // console.log("auth event", data);
       switch (data.payload.event) {
         case "signIn":
           this.isLoggedIn$.next(true);
@@ -39,9 +39,8 @@ export class AuthenticationService {
         username: this.userName,
         password: this.password,
         attributes: {
-          email: this.email, // optional
-          phone_number: this.phone_no, // optional - E.164 number convention
-          // other custom attributes
+          email: this.email,
+          phone_number: this.phone_no,
         },
       });
       console.log(user);
@@ -51,7 +50,10 @@ export class AuthenticationService {
   }
   async signIn() {
     try {
-      const user = await Auth.signIn({ username: "", password: "" });
+      const user = await Auth.signIn({
+        username: "",
+        password: "",
+      });
     } catch (error) {
       console.log("error signing in", error);
     }
